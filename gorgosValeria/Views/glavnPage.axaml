@@ -1,0 +1,161 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="1150"
+             d:DesignHeight="720"
+             x:Class="gorgosValeria.glavnPage"
+             Background="{DynamicResource Bg}">
+
+	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="{DynamicResource Text}"/>
+		</Style>
+		<Style Selector="TextBlock.gray">
+			<Setter Property="Foreground" Value="{DynamicResource Gray}"/>
+			<Setter Property="FontSize" Value="12"/>
+		</Style>
+		<Style Selector="Border.card">
+			<Setter Property="Background" Value="{DynamicResource Panel}"/>
+			<Setter Property="BorderBrush" Value="{DynamicResource Line}"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="CornerRadius" Value="8"/>
+			<Setter Property="Padding" Value="16"/>
+		</Style>
+		<Style Selector="Border.tag">
+			<Setter Property="Background" Value="{DynamicResource Soft}"/>
+			<Setter Property="CornerRadius" Value="4"/>
+			<Setter Property="Padding" Value="7,3"/>
+		</Style>
+		<Style Selector="CheckBox">
+			<Setter Property="Foreground" Value="{DynamicResource Text}"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="ProgressBar">
+			<Setter Property="Height" Value="7"/>
+		</Style>
+	</UserControl.Styles>
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<StackPanel Margin="24" Spacing="16">
+			<TextBlock Text="Обзор" FontSize="26" FontWeight="Bold"/>
+
+			<Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="12">
+				<Border Grid.Column="0" Classes="card">
+					<StackPanel Spacing="8">
+						<TextBlock Classes="gray" Text="Проекты"/>
+						<TextBlock Text="12" FontSize="28" FontWeight="Bold"/>
+						<TextBlock Classes="gray" Text="Активные проекты"/>
+					</StackPanel>
+				</Border>
+				<Border Grid.Column="1" Classes="card">
+					<StackPanel Spacing="8">
+						<TextBlock Classes="gray" Text="Задачи"/>
+						<TextBlock Text="48" FontSize="28" FontWeight="Bold"/>
+						<TextBlock Classes="gray" Text="В работе"/>
+					</StackPanel>
+				</Border>
+				<Border Grid.Column="2" Classes="card">
+					<StackPanel Spacing="8">
+						<TextBlock Classes="gray" Text="Команда"/>
+						<TextBlock Text="8" FontSize="28" FontWeight="Bold"/>
+						<TextBlock Classes="gray" Text="Участников"/>
+					</StackPanel>
+				</Border>
+				<Border Grid.Column="3" Classes="card">
+					<StackPanel Spacing="8">
+						<TextBlock Classes="gray" Text="Сроки"/>
+						<TextBlock Text="5" FontSize="28" FontWeight="Bold"
+                                   Foreground="{DynamicResource Red}"/>
+						<TextBlock Classes="gray" Text="Просрочено"/>
+					</StackPanel>
+				</Border>
+			</Grid>
+
+			<Grid ColumnDefinitions="*,350" ColumnSpacing="16">
+				<Border Grid.Column="0" Classes="card">
+					<StackPanel Spacing="18">
+						<TextBlock Text="Активные проекты" FontSize="16" FontWeight="Bold"/>
+						<StackPanel Spacing="6">
+							<Grid ColumnDefinitions="*,Auto">
+								<TextBlock Text="Avalonia UI Redesign"/>
+								<TextBlock Grid.Column="1" Classes="gray" Text="65%"/>
+							</Grid>
+							<ProgressBar Value="65" Maximum="100" Foreground="#6554D9"/>
+						</StackPanel>
+						<StackPanel Spacing="6">
+							<Grid ColumnDefinitions="*,Auto">
+								<TextBlock Text="Мобильное приложение"/>
+								<TextBlock Grid.Column="1" Classes="gray" Text="40%"/>
+							</Grid>
+							<ProgressBar Value="40" Maximum="100" Foreground="#5997D9"/>
+						</StackPanel>
+						<StackPanel Spacing="6">
+							<Grid ColumnDefinitions="*,Auto">
+								<TextBlock Text="Корпоративный сайт"/>
+								<TextBlock Grid.Column="1" Classes="gray" Text="80%"/>
+							</Grid>
+							<ProgressBar Value="80" Maximum="100" Foreground="#55AE83"/>
+						</StackPanel>
+					</StackPanel>
+				</Border>
+
+				<Border Grid.Column="1" Classes="card" Padding="10">
+					<StackPanel Spacing="10">
+						<TextBlock Text="Календарь" FontSize="16" FontWeight="Bold" Margin="4"/>
+						<Calendar HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Border>
+			</Grid>
+
+			<Border Classes="card">
+				<StackPanel Spacing="12">
+					<TextBlock Text="Последние задачи" FontSize="16" FontWeight="Bold"/>
+
+					<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                            BorderThickness="1" CornerRadius="5" Padding="10">
+						<Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="10">
+							<CheckBox VerticalAlignment="Center"/>
+							<TextBlock Grid.Column="1" Text="Разработать макет главной страницы"
+                                       VerticalAlignment="Center" TextWrapping="Wrap"/>
+							<Border Grid.Column="2" Classes="tag">
+								<TextBlock Foreground="{DynamicResource Accent}" Text="Дизайн"/>
+							</Border>
+							<TextBlock Grid.Column="3" Classes="gray" Text="15.05.2026"
+                                       VerticalAlignment="Center"/>
+						</Grid>
+					</Border>
+
+					<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                            BorderThickness="1" CornerRadius="5" Padding="10">
+						<Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="10">
+							<CheckBox VerticalAlignment="Center"/>
+							<TextBlock Grid.Column="1" Text="Реализовать авторизацию"
+                                       VerticalAlignment="Center" TextWrapping="Wrap"/>
+							<Border Grid.Column="2" Classes="tag">
+								<TextBlock Foreground="#5997D9" Text="Разработка"/>
+							</Border>
+							<TextBlock Grid.Column="3" Classes="gray" Text="14.05.2026"
+                                       VerticalAlignment="Center"/>
+						</Grid>
+					</Border>
+
+					<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                            BorderThickness="1" CornerRadius="5" Padding="10">
+						<Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="10">
+							<CheckBox VerticalAlignment="Center"/>
+							<TextBlock Grid.Column="1" Text="Подготовить презентацию"
+                                       VerticalAlignment="Center" TextWrapping="Wrap"/>
+							<Border Grid.Column="2" Classes="tag">
+								<TextBlock Foreground="#55AE83" Text="Маркетинг"/>
+							</Border>
+							<TextBlock Grid.Column="3" Classes="gray" Text="13.05.2026"
+                                       VerticalAlignment="Center"/>
+						</Grid>
+					</Border>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

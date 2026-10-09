@@ -1,0 +1,115 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="gorgosValeria.MainWindow"
+        Title="Project Studio"
+        Width="1150"
+        Height="720"
+        MinWidth="950"
+        MinHeight="600"
+        Background="{DynamicResource Bg}"
+        WindowStartupLocation="CenterScreen">
+
+	<Window.Styles>
+
+		<Style Selector="Button.menu">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Foreground" Value="{DynamicResource Text}"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="Padding" Value="12,10"/>
+			<Setter Property="BorderThickness" Value="0"/>
+			<Setter Property="CornerRadius" Value="5"/>
+		</Style>
+
+		<Style Selector="Button.menu:pointerover">
+			<Setter Property="Background" Value="{DynamicResource Soft}"/>
+			<Setter Property="Foreground" Value="{DynamicResource Accent}"/>
+		</Style>
+
+		<Style Selector="Button.menu:pressed">
+			<Setter Property="Background" Value="{DynamicResource Soft}"/>
+			<Setter Property="Foreground" Value="{DynamicResource Accent}"/>
+		</Style>
+
+		<Style Selector="Button.menu.active">
+			<Setter Property="Background" Value="{DynamicResource Soft}"/>
+			<Setter Property="Foreground" Value="{DynamicResource Accent}"/>
+		</Style>
+
+	</Window.Styles>
+
+	<DockPanel Background="{DynamicResource Bg}">
+
+		<Border x:Name="Sidebar"
+                DockPanel.Dock="Left"
+                Width="206"
+                IsVisible="False"
+                Background="{DynamicResource Panel}"
+                BorderBrush="{DynamicResource Line}"
+                BorderThickness="0,0,1,0"
+                Padding="12">
+
+			<Grid RowDefinitions="Auto,*,Auto">
+
+				<TextBlock Grid.Row="0"
+                           Text="Project Studio"
+                           FontSize="21"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource Accent}"
+                           Margin="8,8,0,24"/>
+
+				<StackPanel Grid.Row="1" Spacing="4">
+
+					<Button x:Name="BtnOverview"
+                            Classes="menu active"
+                            Content="Обзор"
+                            Click="Menu_Click"/>
+
+					<Button x:Name="BtnProjects"
+                            Classes="menu"
+                            Content="Проекты"
+                            Click="Menu_Click"/>
+
+					<Button x:Name="BtnTasks"
+                            Classes="menu"
+                            Content="Задачи"
+                            Click="Menu_Click"/>
+
+					<Button x:Name="BtnCalendar"
+                            Classes="menu"
+                            Content="Календарь"
+                            Click="Menu_Click"/>
+
+					<Button x:Name="BtnTeam"
+                            Classes="menu"
+                            Content="Команда"
+                            Click="Menu_Click"/>
+
+					<Button x:Name="BtnSettings"
+                            Classes="menu"
+                            Content="Настройки"
+                            Click="Menu_Click"/>
+
+				</StackPanel>
+
+				<StackPanel Grid.Row="2" Spacing="4">
+
+					<Button x:Name="BtnProfile"
+                            Classes="menu"
+                            Content="Мой профиль"
+                            Click="Menu_Click"/>
+
+					<Button Classes="menu"
+                            Content="Выйти"
+                            Click="Logout_Click"/>
+
+				</StackPanel>
+
+			</Grid>
+		</Border>
+
+		<ContentControl x:Name="MainContent"
+                        Background="{DynamicResource Bg}"/>
+
+	</DockPanel>
+</Window>

@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="gorgosValeria.avtoriz">
+
+	<Grid Background="#F1F2F5">
+		<Border Width="350"
+                Padding="29"
+                Background="#FFFFFF"
+                BorderBrush="#E1E3EA"
+                BorderThickness="1"
+                CornerRadius="7"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+			<StackPanel Spacing="8">
+
+				<TextBlock Text="Project Studio"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Foreground="#000000"
+                           HorizontalAlignment="Center"/>
+
+				<TextBlock Text="Войдите в аккаунт"
+                           FontSize="12"
+                           Foreground="#77798B"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,8"/>
+
+				<TextBlock Text="Логин"
+                           FontSize="14"
+                           Foreground="#292B3A"/>
+
+				<TextBox x:Name="LoginBox"
+                         Height="34"
+                         Watermark="Введите логин"/>
+
+				<TextBlock Text="Пароль"
+                           FontSize="14"
+                           Foreground="#292B3A"
+                           Margin="0,2,0,0"/>
+
+				<TextBox x:Name="PasswordBox"
+                         Height="34"
+                         Watermark="Введите пароль"
+                         PasswordChar="●"/>
+
+				<TextBlock x:Name="ErrorMessage"
+                           Text=""
+                           Foreground="#D64E70"
+                           FontSize="12"
+                           TextWrapping="Wrap"/>
+
+				<Button Content="Войти"
+                        Height="34"
+                        Background="#315BE8"
+                        Foreground="#FFFFFF"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,3,0,0"
+                        Click="Login_Click"/>
+
+			</StackPanel>
+		</Border>
+	</Grid>
+</UserControl>

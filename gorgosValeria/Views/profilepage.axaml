@@ -1,0 +1,80 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="gorgosValeria.profilepage"
+             Background="{DynamicResource Bg}">
+
+	<ScrollViewer>
+		<StackPanel Margin="24" Spacing="18">
+			<TextBlock Text="Мой профиль" FontSize="26" FontWeight="Bold"
+                       Foreground="{DynamicResource Text}"/>
+
+			<Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}"
+                    BorderThickness="1" CornerRadius="8" Padding="22">
+				<StackPanel Spacing="18">
+					<StackPanel HorizontalAlignment="Center" Spacing="8">
+						<Border Width="88" Height="88" Background="{DynamicResource Soft}" CornerRadius="44">
+							<TextBlock Text="ПП" FontSize="28" FontWeight="Bold"
+                                       Foreground="{DynamicResource Accent}"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+						</Border>
+						<TextBlock Text="Горгос Валерия Александровна" FontSize="18" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+						<TextBlock Text="Участник команды" Foreground="{DynamicResource Gray}"/>
+					</StackPanel>
+
+					<StackPanel Spacing="6">
+						<TextBlock Text="Имя" FontWeight="SemiBold" Foreground="{DynamicResource Text}"/>
+						<TextBox Text="Горгос Валерия Александровна"/>
+					</StackPanel>
+
+					<StackPanel Spacing="6">
+						<TextBlock Text="Электронная почта" FontWeight="SemiBold"
+                                   Foreground="{DynamicResource Text}"/>
+						<TextBox Watermark="Введите электронную почту"/>
+					</StackPanel>
+
+					<StackPanel Spacing="6">
+						<TextBlock Text="Должность" FontWeight="SemiBold" Foreground="{DynamicResource Text}"/>
+						<TextBox Text="Участник команды"/>
+					</StackPanel>
+
+					<StackPanel Spacing="6">
+						<TextBlock Text="О себе" FontWeight="SemiBold" Foreground="{DynamicResource Text}"/>
+						<TextBox Watermark="Расскажите о себе" AcceptsReturn="True"
+                                 Height="90" TextWrapping="Wrap"/>
+					</StackPanel>
+
+					<Button Content="Сохранить профиль"
+                            HorizontalAlignment="Left"
+                            Padding="18,11"
+                            Background="{DynamicResource Accent}"
+                            Foreground="White"
+                            CornerRadius="6"/>
+				</StackPanel>
+			</Border>
+
+			<Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}"
+                    BorderThickness="1" CornerRadius="8" Padding="20">
+				<StackPanel Spacing="10">
+					<TextBlock Text="Моя активность" FontSize="18" FontWeight="Bold"
+                               Foreground="{DynamicResource Text}"/>
+					<Grid ColumnDefinitions="*,Auto">
+						<TextBlock Text="Проекты" Foreground="{DynamicResource Text}"/>
+						<TextBlock Grid.Column="1" Text="3" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+					</Grid>
+					<Grid ColumnDefinitions="*,Auto">
+						<TextBlock Text="Назначенные задачи" Foreground="{DynamicResource Text}"/>
+						<TextBlock Grid.Column="1" Text="12" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+					</Grid>
+					<Grid ColumnDefinitions="*,Auto">
+						<TextBlock Text="Завершенные задачи" Foreground="{DynamicResource Text}"/>
+						<TextBlock Grid.Column="1" Text="8" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+					</Grid>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

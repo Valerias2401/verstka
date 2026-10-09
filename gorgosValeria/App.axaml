@@ -1,0 +1,43 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="gorgosValeria.App"
+             RequestedThemeVariant="Light">
+
+	<Application.Styles>
+		<FluentTheme/>
+	</Application.Styles>
+
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.ThemeDictionaries>
+				<ResourceDictionary x:Key="Light">
+					<SolidColorBrush x:Key="Bg" Color="#F2F3F5"/>
+					<SolidColorBrush x:Key="Panel" Color="#FFFFFF"/>
+					<SolidColorBrush x:Key="Line" Color="#E1E3EA"/>
+					<SolidColorBrush x:Key="Text" Color="#292B3A"/>
+					<SolidColorBrush x:Key="Gray" Color="#77798B"/>
+					<SolidColorBrush x:Key="Soft" Color="#E8ECFF"/>
+					<SolidColorBrush x:Key="Accent" Color="#5946C7"/>
+					<SolidColorBrush x:Key="Red" Color="#D64E70"/>
+					<SolidColorBrush x:Key="Hover" Color="#E5E9FA"/>
+					<SolidColorBrush x:Key="Pressed" Color="#D5DDF8"/>
+					<SolidColorBrush x:Key="Task" Color="#FAFAFD"/>
+				</ResourceDictionary>
+
+				<ResourceDictionary x:Key="Dark">
+					<SolidColorBrush x:Key="Bg" Color="#1B1D23"/>
+					<SolidColorBrush x:Key="Panel" Color="#272A33"/>
+					<SolidColorBrush x:Key="Line" Color="#3B3F4A"/>
+					<SolidColorBrush x:Key="Text" Color="#F0F1F5"/>
+					<SolidColorBrush x:Key="Gray" Color="#B0B4C0"/>
+					<SolidColorBrush x:Key="Soft" Color="#38334F"/>
+					<SolidColorBrush x:Key="Accent" Color="#A99AFB"/>
+					<SolidColorBrush x:Key="Red" Color="#F07891"/>
+					<SolidColorBrush x:Key="Hover" Color="#38334F"/>
+					<SolidColorBrush x:Key="Pressed" Color="#494064"/>
+					<SolidColorBrush x:Key="Task" Color="#30333D"/>
+				</ResourceDictionary>
+			</ResourceDictionary.ThemeDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

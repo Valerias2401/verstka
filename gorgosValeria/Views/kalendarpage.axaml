@@ -1,0 +1,69 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="gorgosValeria.kalendarpage"
+             Background="{DynamicResource Bg}">
+
+	<ScrollViewer>
+		<StackPanel Margin="24" Spacing="18">
+			<TextBlock Text="Календарь" FontSize="26" FontWeight="Bold"
+                       Foreground="{DynamicResource Text}"/>
+
+			<Grid ColumnDefinitions="*,380" ColumnSpacing="16">
+				<Border Grid.Column="0" Background="{DynamicResource Panel}"
+                        BorderBrush="{DynamicResource Line}" BorderThickness="1"
+                        CornerRadius="8" Padding="18">
+					<StackPanel Spacing="14">
+						<TextBlock Text="Календарь событий" FontSize="18" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+						<Calendar HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Border>
+
+				<Border Grid.Column="1" Background="{DynamicResource Panel}"
+                        BorderBrush="{DynamicResource Line}" BorderThickness="1"
+                        CornerRadius="8" Padding="18">
+					<StackPanel Spacing="14">
+						<TextBlock Text="Предстоящие события" FontSize="18" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+
+						<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                                BorderThickness="1" CornerRadius="6" Padding="12">
+							<StackPanel Spacing="5">
+								<TextBlock Text="Планирование проекта" FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Text}"/>
+								<TextBlock Text="12 октября 2026, 10:00" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+								<TextBlock Text="Команда разработки" FontSize="12"
+                                           Foreground="{DynamicResource Accent}"/>
+							</StackPanel>
+						</Border>
+
+						<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                                BorderThickness="1" CornerRadius="6" Padding="12">
+							<StackPanel Spacing="5">
+								<TextBlock Text="Проверка макетов" FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Text}"/>
+								<TextBlock Text="15 октября 2026, 14:00" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+								<TextBlock Text="Дизайн" FontSize="12"
+                                           Foreground="{DynamicResource Accent}"/>
+							</StackPanel>
+						</Border>
+
+						<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                                BorderThickness="1" CornerRadius="6" Padding="12">
+							<StackPanel Spacing="5">
+								<TextBlock Text="Сдача проекта" FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Text}"/>
+								<TextBlock Text="20 октября 2026, 16:00" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+								<TextBlock Text="Корпоративный сайт" FontSize="12"
+                                           Foreground="#55AE83"/>
+							</StackPanel>
+						</Border>
+					</StackPanel>
+				</Border>
+			</Grid>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

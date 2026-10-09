@@ -1,0 +1,104 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="gorgosValeria.proect"
+             Background="{DynamicResource Bg}">
+
+	<ScrollViewer>
+		<StackPanel Margin="24" Spacing="18">
+			<TextBlock Text="Проекты" FontSize="26" FontWeight="Bold"
+                       Foreground="{DynamicResource Text}"/>
+
+			<Grid ColumnDefinitions="*,Auto">
+				<TextBox Watermark="Поиск проектов..." Width="280" HorizontalAlignment="Left"/>
+				<Button Grid.Column="1" Content="+ Создать проект"
+                        Background="{DynamicResource Accent}" Foreground="White"
+                        Padding="16,10" CornerRadius="6"/>
+			</Grid>
+
+			<Grid ColumnDefinitions="*,*,*" ColumnSpacing="14">
+				<Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}"
+                        BorderThickness="1" CornerRadius="8" Padding="16">
+					<StackPanel Spacing="8">
+						<TextBlock Text="Всего проектов" Foreground="{DynamicResource Gray}"/>
+						<TextBlock Text="12" FontSize="28" FontWeight="Bold"
+                                   Foreground="{DynamicResource Text}"/>
+					</StackPanel>
+				</Border>
+				<Border Grid.Column="1" Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}"
+                        BorderThickness="1" CornerRadius="8" Padding="16">
+					<StackPanel Spacing="8">
+						<TextBlock Text="В работе" Foreground="{DynamicResource Gray}"/>
+						<TextBlock Text="8" FontSize="28" FontWeight="Bold"
+                                   Foreground="{DynamicResource Accent}"/>
+					</StackPanel>
+				</Border>
+				<Border Grid.Column="2" Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}"
+                        BorderThickness="1" CornerRadius="8" Padding="16">
+					<StackPanel Spacing="8">
+						<TextBlock Text="Завершено" Foreground="{DynamicResource Gray}"/>
+						<TextBlock Text="4" FontSize="28" FontWeight="Bold" Foreground="#39956C"/>
+					</StackPanel>
+				</Border>
+			</Grid>
+
+			<Border Background="{DynamicResource Panel}" BorderBrush="{DynamicResource Line}"
+                    BorderThickness="1" CornerRadius="8" Padding="18">
+				<StackPanel Spacing="16">
+					<TextBlock Text="Все проекты" FontSize="18" FontWeight="Bold"
+                               Foreground="{DynamicResource Text}"/>
+
+					<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                            BorderThickness="1" CornerRadius="6" Padding="14">
+						<StackPanel Spacing="10">
+							<TextBlock Text="Avalonia UI Redesign" FontSize="16" FontWeight="Bold"
+                                       Foreground="{DynamicResource Text}"/>
+							<TextBlock Text="Обновление интерфейса приложения"
+                                       Foreground="{DynamicResource Gray}"/>
+							<ProgressBar Value="65" Height="7" Foreground="{DynamicResource Accent}"/>
+							<Grid ColumnDefinitions="*,Auto">
+								<TextBlock Text="65% выполнено" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+								<TextBlock Grid.Column="1" Text="Срок: 20.10.2026" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                            BorderThickness="1" CornerRadius="6" Padding="14">
+						<StackPanel Spacing="10">
+							<TextBlock Text="Мобильное приложение" FontSize="16" FontWeight="Bold"
+                                       Foreground="{DynamicResource Text}"/>
+							<TextBlock Text="Разработка мобильной версии"
+                                       Foreground="{DynamicResource Gray}"/>
+							<ProgressBar Value="40" Height="7" Foreground="#5997D9"/>
+							<Grid ColumnDefinitions="*,Auto">
+								<TextBlock Text="40% выполнено" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+								<TextBlock Grid.Column="1" Text="Срок: 25.10.2026" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+
+					<Border Background="{DynamicResource Task}" BorderBrush="{DynamicResource Line}"
+                            BorderThickness="1" CornerRadius="6" Padding="14">
+						<StackPanel Spacing="10">
+							<TextBlock Text="Корпоративный сайт" FontSize="16" FontWeight="Bold"
+                                       Foreground="{DynamicResource Text}"/>
+							<TextBlock Text="Создание сайта компании"
+                                       Foreground="{DynamicResource Gray}"/>
+							<ProgressBar Value="80" Height="7" Foreground="#55AE83"/>
+							<Grid ColumnDefinitions="*,Auto">
+								<TextBlock Text="80% выполнено" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+								<TextBlock Grid.Column="1" Text="Срок: 30.10.2026" FontSize="12"
+                                           Foreground="{DynamicResource Gray}"/>
+							</Grid>
+						</StackPanel>
+					</Border>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>

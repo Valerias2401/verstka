@@ -1,0 +1,46 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="gorgosValeria.settingspage"
+             Background="{DynamicResource Bg}">
+
+	<StackPanel Margin="24" Spacing="18">
+		<TextBlock Text="Настройки"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource Text}"/>
+
+		<Border Background="{DynamicResource Panel}"
+                BorderBrush="{DynamicResource Line}"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="18">
+
+			<StackPanel Spacing="10">
+				<TextBlock Text="Тема приложения"
+                           FontSize="16"
+                           FontWeight="SemiBold"
+                           Foreground="{DynamicResource Text}"/>
+
+				<TextBlock Text="Переключение между светлой и тёмной темой"
+                           Foreground="{DynamicResource Text}"
+                           TextWrapping="Wrap"/>
+
+				<StackPanel Orientation="Horizontal"
+                            Spacing="12"
+                            VerticalAlignment="Center">
+
+					<ToggleSwitch x:Name="ThemeSwitch"
+                                  Checked="ThemeSwitch_Checked"
+                                  Unchecked="ThemeSwitch_Unchecked"
+                                  OnContent=""
+                                  OffContent=""/>
+
+					<TextBlock x:Name="ThemeLabel"
+                               Text="Светлая"
+                               VerticalAlignment="Center"
+                               Foreground="{DynamicResource Text}"/>
+				</StackPanel>
+			</StackPanel>
+		</Border>
+	</StackPanel>
+</UserControl>
